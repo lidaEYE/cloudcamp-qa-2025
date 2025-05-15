@@ -1,7 +1,8 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-test('first test', async ({ page }) => {
+test('first test', async ({ context, page }) => {
+  test.setTimeout(60000);
   // Открытие веб-страницы
   await page.goto('https://example.com');
 
@@ -11,7 +12,8 @@ test('first test', async ({ page }) => {
   // Поиск элемента и клик
   await page.click('a:has-text("More information")');
 
+
   // Проверка, что произошло перенаправление на необходимый URL
-  await page.waitForURL('https://www.iana.org/help/example-domains')
+  expect(page.url()).toBe('https://www.iana.org/help/example-domains');
 });
 
