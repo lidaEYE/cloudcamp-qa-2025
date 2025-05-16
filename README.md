@@ -77,3 +77,4 @@ l.glazikova@gmail.com
 - Python - 3.11.9
 - playwright/test - 1.52.0
 - types/node - 22.15.18
+- npm - 10.9.2
